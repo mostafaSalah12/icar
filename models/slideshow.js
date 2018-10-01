@@ -1,0 +1,108 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+
+var SlideshowSchema = new mongoose.Schema({
+
+    slideshowName:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    image1:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    title1:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    title1Ar:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    url1:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    image2:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    title2:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    title2Ar:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    url2:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    image3:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    title3:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    title3Ar:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    url3:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    image4:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    title4:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    title4Ar:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    url4:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+});
+
+
+module.exports.Slideshow = mongoose.model('Slideshow', SlideshowSchema);

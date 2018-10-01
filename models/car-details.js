@@ -1,0 +1,147 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+
+var CarDetailsSchema = new mongoose.Schema({
+
+    carNameAr:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    carNameEn:{
+        type:String,
+        minlength:2,
+        maxlength:255,
+        required:true
+    },
+    carRate:{
+        type:Number,
+      max
+    },
+    createdDate:{
+        type:Date,
+        default:Date.now(),
+        required:true
+    },
+    curbWeight:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    engineCapacity:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    fuelTankCapacity:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    grossVehicleWeight:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    groundClearance:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    height:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    length:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    maxPower:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    maxTorque:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    transmission:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    trunkCapacity:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    },
+    price:{
+        type:String,
+        minlength:1,
+        maxlength:255
+    } ,
+    mainPic:{
+        type:String,
+        minlength:1,
+        maxlength:600,
+        required:true
+    },
+    
+    carCatalog:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    internalImage1:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    internalImage2:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    internalImage3:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    externalImage1:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    externalImage2:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    externalImage3:{
+        type:String,
+        minlength:2,
+        maxlength:600
+    },
+    isDeleted:{
+        type:Boolean,
+        default:false,
+        required:true
+    },
+    carModel:{
+        type:{
+            modelId:{type:Schema.Types.ObjectId, ref: 'CarModel'},
+            modelNameAr:String,
+            ModelNameEn:String
+        },
+        required:true
+    }
+
+});
+
+
+module.exports.CarDetails = mongoose.model('CarDetails', CarDetailsSchema);
