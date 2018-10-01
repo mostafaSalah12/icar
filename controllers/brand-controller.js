@@ -96,7 +96,7 @@ module.exports.deleteBrand= async function(req, res, next){
     
     //delete
     try{
-        const brand =  await CarBrand.findOneAndUpdate({_id:_brand.brandId});
+        const brand =  await CarBrand.findOneAndDelete({_id:_brand.brandId});
        return res.status(200).send({
             status:"OK",
             message:"SUCCESS",

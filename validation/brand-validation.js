@@ -13,7 +13,7 @@ module.exports.validateBrand =  function(brand){
         brandImage: Joi.string().min(2).max(600).required()
         
     };
-      return Joi.validate(address, schema);
+      return Joi.validate(brand, schema);
 }
 
 module.exports.validateUpdateBrand =  function(brand){
@@ -24,5 +24,5 @@ module.exports.validateUpdateBrand =  function(brand){
         brandImage: Joi.string().min(2).max(600).required()
         
     };
-      return Joi.validate(address, schema);
+      return Joi.validate(brand, schema);
 }
